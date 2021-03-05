@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome To My Website </title>
+        <meta charset="utf-8">
+
+        <style>
+            
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        
+            body {
+                background-image: url(img/Architecture/arc_2.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                overflow-y:auto;
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+
+            ul{
+                list-style: none;
+            }
+
+
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:black;
+                border-bottom: rgb(87, 1, 87);
+                border-style: solid;
+                border-width: 1em;
+                border-end-end-radius: 5%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                padding: 0 1em 0 1em;
+                width: 100%;
+                height: 12%;
+            }
+
+
+            .my_logo a{
+                text-decoration: none;
+                color:white;
+                text-shadow: 5px 1px 1px rgb(97, 5, 97);
+                font-size: 2.5em;
+                
+            }
+
+            .msg_logo{
+                color:white;
+                text-shadow: 2px 1px 1px rgb(97, 5, 97);
+                font-size: 2.5em;
+            }
+
+            .nav_links{
+                list-style: none;
+                
+            }
+
+            .nav_links li {
+                display: inline-block;
+                padding: 0 0.5em;
+            }
+
+            .nav_links li a {
+                text-decoration: none;
+                text-shadow: 2px 1px 1px rgb(97, 5, 97);
+                font-size: 2.5em;
+                color: white;
+            }
+
+            .nav_links li a:hover{
+                color: rgb(119, 4, 119);
+            } 
+
+            section{
+                height: 100%;
+                padding: 8em 5% 30em 5%;
+                color: rgb(255, 255, 255);
+            }
+
+            section h2{
+                text-shadow: 4px 2px black ;
+                text-align: center;
+                font-size: 4.5em;
+                margin-bottom: 0.5em;
+
+            }
+
+            section h3{
+                font-size: 1.5em;
+                text-shadow: 4px 2px black ;
+            }
+
+            .section{
+                text-shadow: 2px 2px black ;
+                font-size: 2em;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                text-align: flex-start;
+                flex-wrap: wrap ;
+                width: 80%;
+    
+            }
+
+
+            .section div{
+                margin-top: 1em
+            }
+
+            .section p{
+                margin: 0.5em 1em;
+            }
+
+            .section ul{
+                padding: 1em 0;
+                display: flex; 
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            .section li{
+                padding: 0 0.5em 0.2em 0.4em;
+            }
+
+            footer{
+                display: flex;
+                justify-content: space-evenly;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 3.5em;
+                background-color: black;
+                border-top: purple 0.3em solid;
+
+            }
+
+            footer a{
+                margin: auto;
+                text-decoration: none;
+                color: white;
+                font-size: 2em;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header> 
+            <h1 class="my_logo"><a href="index.html"> Qty </a></h1>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="portfolio.html"> Portfolio </a></li>
+                    <li><a href=""> Robotics </a></li>
+                    <li><a href=""> Projects </a></li>
+                </ul>
+            </nav>
+            <h1 class="msg_logo">Msg</h1>
+        </header>
+
+        <main>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="section"> 
+                    <div>
+                        <h3>High School</h3>
+                        <p>Metu HighSchool (2015-2020)</p>
+                    </div>
+
+                    <div>
+                        <h3>University</h3>
+                        <p>Yıldız Technical University (2020-2024)</p>
+                        <p>Computer Engineering</p>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="skills">
+                <h2>Skills</h2>
+
+                <div class="section">
+                
+                    <div>
+                        <h3>Known Languages</h3>
+                        <ul>
+                            <li>Turkish</li>
+                            <li>English</li>
+                            <li>German</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Known Instruments</h3>
+                        <ul>
+                            <li>Guitar: Intermediate</li>
+                            <li>Piano: Beginner </li>
+                        </ul>
+                    </div>
+
+
+                    <div>
+                        <h3>Known Programming Languages</h3>
+                        <ul>
+                            <li>Python: Intermediate</li>
+                            <li>C++: Beginner </li>
+                            <li>C: Beginner</li>
+                            <li>Html/CSS: Intermediate </li>
+                            <li>Ros: Beginner-Intermediate</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Known Sports</h3>
+                        <ul>
+                            <li>Swimming</li>
+                            <li>Basketball</li>
+                            <li>Tennis</li>
+                            <li>Futball</li>
+                            <li>Archery</li>
+                            <li>Table Tennis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </section>
+
+
+            <section id="interest">
+                <h2>Interests</h2>
+                <div class="section">
+                    <ul>
+                        <li>Robotics</li>
+                        <li>Web Design</li>
+                        <li>App Development</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section  id="achievments">
+                <h2>Awards and Achievments</h2>
+                <div class="section"> 
+                    <ul>
+                        <li>Member of Igem 2018 Metu-HS team: Silver Medal and Nominee at 5 different field </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="section"> 
+                    <ul>
+                        <li>None </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="#education"> Education</a>
+            <a href="#skills"> Skills</a>
+            <a href="#interest"> Interests</a>
+            <a href="#achievments"> Achievments</a>
+            <a href="#projects"> Projects</a>
+        </footer>
+    </body>
+
+
+</html>
