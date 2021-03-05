@@ -4,27 +4,211 @@
     <head>
         <title>Welcome To My Website </title>
         <meta charset="utf-8">
-    </head>
-    
-    <style>
-        h1{
-            text-align: center;
-        }
-        
-        img{
-            float: left;
-            width: 45%;
-            padding: 5px;;
 
-        }
+        <style>
             
-            
-    </style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        
+            body {
+                background-color: rgb(204, 204, 204);
+            }
+
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:black;
+                padding: 1% 5%;
+                border-bottom: rgb(87, 1, 87);
+                border-style: solid;
+                border-width: 1em;
+                border-end-end-radius: 5%;
+            }
+
+            .my_logo{
+                color:white;
+                text-shadow: 5px 1px 1px rgb(97, 5, 97);
+                font-size: 4.5em;
+            }
+
+            .msg_logo{
+                color:white;
+                text-shadow: 2px 1px 1px rgb(97, 5, 97);
+                font-size: 2.5em;
+            }
+
+            .nav_links{
+                list-style: none;
+            }
+
+            .nav_links li {
+                display: inline-block;
+                padding: 0 0.5em;
+                text-shadow: 2px 1px 1px rgb(97, 5, 97);
+                font-size: 2.5em;
+                color: white;
+            }
+
+
+            main{
+                display: flex;
+                justify-content: space-between;    
+                align-items: center;   
+                height: 40em;       
+            }
+
+            .quotes_slide{
+                width: 60%;
+                overflow: auto;
+                text-align: center;
+                
+            }
+            .quote{
+                font-size: 1.8em;
+            }
+
+            .nav_button{
+                font-size: 2em;
+                width: auto;
+                padding: 16px;
+                cursor: pointer;
+                transition: 1s ease;
+                border-radius: 30%;
+            }
+            #next{
+                margin-right: 10%;
+            }
+
+            #prev{
+                margin-left: 10%;
+            }
+
+            #prev:hover,  #next:hover {
+                background-color: rgba(145, 145, 145, 0.8);
+            }
+
+        </style>
+
+    </head>
 
     <body>
-        <h1>
-            MythBuster Izlıyoduuuuuuuuuum
-        </h1>
-        
+        <header> 
+            <h1 class="my_logo">Qty</h1>
+            <nav>
+                <ul class="nav_links">
+                    <li>Portfolio</li>
+                    <li>Robotics</li>
+                    <li>Projects</li>
+                </ul>
+            </nav>
+            <h1 class="msg_logo">Msg</h1>
+        </header>
+
+        <main>
+
+            <a id="prev" class="nav_button" onclick="change_slide(-1)">&#10094;</a>
+
+            <div class="quotes_slide">
+
+                <div class="quote">
+                    <h2>Medecine, law, business, engineering, 
+                        these are noble pursuits and necessary to sustain life. 
+                        But poetry, beauty, romance, love: these are what we stay 
+                        alive for</h2>
+                    <br>
+                    <p>Dead Poets Society</p>
+                </div>
+
+
+                <div class="quote">
+                    <h2>May The Force Be With You</h2>
+                    <br>
+                    <p>Star Wars</p>
+                </div>
+
+                <div class="quote">
+                    <h2>A wise man can learn more from his 
+                        enemies than a fool from his friends</h2>
+                    <br>
+                    <p>Rush</p>
+                </div>
+
+                <div class="quote">
+                    <h2>Do, or do not. There is no “try"</h2>
+                    <br>
+                    <p>Star Wars</p>
+                </div>
+
+                <div class="quote">
+                    <h2>Every man dies, but not every man really lives.</h2>
+                    <br>
+                    <p>Brave Heart</p>
+                </div>
+
+                <div class="quote">
+                    <h2>No matter what people tell you, words and ideas 
+                        can change the world</h2>
+                    <br>
+                    <p>Dead Poets Society</p>
+                </div>
+
+                <div class="quote">
+                    <h2>Nobody is gonna hit as hard as life, 
+                        but it ain’t how hard you can hit. 
+                        It’s how hard you can get hit and keep moving forward. 
+                        It’s how much you can take, and keep moving forward. 
+                        That’s how winning is done</h2>
+                    <br>
+                    <p>Rocky Balboa</p>
+                </div>
+
+                <div class="quote">
+                    <h2>There should be no boundaries to human endeavor. 
+                        We are all different. However bad life may seem, 
+                        there is always something you can do, and succeed at. 
+                        While there’s life, there is hope.</h2>
+                    <br>
+                    <p>Theory of Everything</p>
+                </div>
+            </div>
+
+            <a id="next" class="nav_button" onclick="change_slide(1)">&#10095;</a>
+            
+        </main>
     </body>
+
+    <script>
+        var slide_index = 1;
+        show_slide(slide_index);
+
+        function change_slide(n){
+            show_slide(slide_index+=n)
+        }
+
+        function show_slide(n){
+            var slides = document.getElementsByClassName("quote");
+            if(n>slides.length){
+                slide_index = 1
+            }
+
+            if(n < 1){
+                slide_index = slides.length
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slide_index-1].style.display= "block"
+
+
+        }
+    </script>
+
+
 </html>
